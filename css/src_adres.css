@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "os";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "osm";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "oss";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "osb";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "os";
+}
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
