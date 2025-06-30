@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Форма авторизации -->
+    <div class="container" id="login-container">
+        <h1>Авторизация</h1>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Логин:</label>
+                <input type="text" id="username" required>
+                <div class="error-message" id="username-error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" required>
+                <div class="error-message" id="password-error"></div>
+            </div>
+            <button type="submit" class="btn">Авторизоваться</button>
+        </form>
+        <a href="#" id="change-password-link">Сменить пароль</a>
+    </div>
+
+    <!-- Модальное окно смены пароля -->
+    <div id="password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Смена пароля</h2>
+            <form id="password-change-form">
+                <div class="input-group">
+                    <label for="modal-username">Логин:</label>
+                    <input type="text" id="modal-username" required>
+                    <div class="error-message" id="modal-username-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="current-password">Текущий пароль:</label>
+                    <input type="password" id="current-password" required>
+                    <div class="error-message" id="current-password-error"></div>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">Новый пароль:</label>
+                    <input type="password" id="new-password" required>
+                    <div class="error-message" id="new-password-error"></div>
+                    <div id="password-requirements">
+                        <p>Требования к паролю:</p>
+                        <ul>
+                            <li id="length-req">Длина 12 символов</li>
+                            <li id="digit-req">Минимум 1 цифра</li>
+                            <li id="upper-req">Минимум 1 заглавная буква (A-Z)</li>
+                            <li id="lower-req">Минимум 1 строчная буква (a-z)</li>
+                            <li id="special-req">Минимум 1 спецсимвол (!@#$%^&* и т.д.)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Подтвердите пароль:</label>
+                    <input type="password" id="confirm-password" required>
+                    <div class="error-message" id="confirm-password-error"></div>
+                </div>
+                <button type="submit" class="btn">Изменить пароль</button>
+                <div class="success-message" id="password-change-success"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./auth.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
