@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "os";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "osm";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "oss";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "osb";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "os";
+}
+/* Стили для страницы глоссария */
+.glossary-section {
+  padding: 30px 0 50px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  margin: 25px 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.links-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.links-table th {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-family: "oss";
+  font-size: 15px;
+}
+
+.links-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  font-family: "os";
+  vertical-align: top;
+}
+
+.links-table tr:last-child td {
+  border-bottom: none;
+}
+
+.links-table tr:hover {
+  background-color: #f5f7fa;
+}
+
+.path {
+  font-style: italic;
+  color: #555;
+}
+
+.special-note {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-left: 4px solid #4a90e2;
+  margin: 20px 0;
+  font-family: "os";
+}
+
+.special-note strong {
+  font-family: "osb";
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .table-responsive {
+    margin-left: -15px;
+    margin-right: -15px;
+    border-radius: 0;
+  }
+}

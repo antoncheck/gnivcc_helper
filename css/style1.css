@@ -1,0 +1,170 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+#change-password-link {
+    display: block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#change-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Сообщения об ошибках */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    min-height: 20px;
+}
+
+.success-message {
+    color: #27ae60;
+    font-size: 14px;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #777;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Требования к паролю */
+#password-requirements {
+    background-color: #f9f9f9;
+    border-left: 4px solid #3498db;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#password-requirements ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+#password-requirements li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.requirement-met {
+    color: #27ae60 !important;
+    font-weight: bold;
+}
+
+.requirement-not-met {
+    color: #e74c3c;
+}
+
+/* Страница системы */
+.hidden {
+    display: none;
+}
+
+.system-content {
+    padding: 20px;
+}
+
+#logout-btn {
+    background-color: #e74c3c;
+    margin-top: 20px;
+    width: auto;
+    padding: 10px 20px;
+}
+
+#logout-btn:hover {
+    background-color: #c0392b;
+}

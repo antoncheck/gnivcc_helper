@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style1.css">
 </head>
 <body>
     <!-- Форма авторизации -->
@@ -24,6 +24,7 @@
             <button type="submit" class="btn">Авторизоваться</button>
         </form>
         <a href="#" id="change-password-link">Сменить пароль</a>
+        <a href=".//index.html">На главную</a>
     </div>
 
     <!-- Модальное окно смены пароля -->
@@ -68,7 +69,15 @@
         </div>
     </div>
 
-    <script src="./auth.js"></script>
-    <script src="./index.js"></script>
+    <!-- Страница после авторизации -->
+    <div id="main-page" class="container hidden">
+        <h1>Информационная система предприятия</h1>
+        <div class="system-content">
+            <p>Добро пожаловать в информационную систему!</p>
+            <button id="logout-btn" class="btn">Выйти</button>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
 </body>
 </html>
