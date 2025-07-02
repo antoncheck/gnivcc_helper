@@ -1,0 +1,215 @@
+@font-face {
+  font-family: "os";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "osm";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "oss";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "osb";
+  src: url(../fonts/OpenSans.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "os";
+}
+
+/* Специфичные стили для страницы RTM */
+.rtm-section {
+  padding: 40px 0;
+}
+
+.rtm-header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  font-family: "oss";
+}
+
+.config-block {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-left: 4px solid #4a90e2;
+}
+
+.config-title {
+  font-family: "osb";
+  font-size: 18px;
+  color: #172b4d;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.config-title i {
+  margin-right: 10px;
+  color: #4a90e2;
+}
+
+.connection-string {
+  background-color: #f5f7fa;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.sub-config {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.sub-title {
+  font-family: "oss";
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #4a90e2;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "oss";
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+}
+
+.copy-btn:hover {
+  background-color: #3a7bc8;
+}
+
+@media (max-width: 768px) {
+  .connection-string {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .config-title {
+    font-size: 16px;
+  }
+}
+/* Основные стили */
+.media-config-section {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.media-config-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centered-block {
+  width: 100%;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+/* Текстовые блоки */
+.text-block {
+  padding: 0 20px;
+}
+
+.config-heading {
+  font-family: "osb", sans-serif;
+  font-size: 18px;
+  color: #172b4d;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.config-subtext {
+  font-family: "os", sans-serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Медиа-блоки */
+.media-block {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.responsive-media {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .config-heading {
+    font-size: 19px;
+  }
+  
+  .config-subtext {
+    font-size: 15px;
+  }
+  
+  .media-block {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .config-heading {
+    font-size: 17px;
+  }
+  
+  .text-block {
+    padding: 0 10px;
+  }
+}

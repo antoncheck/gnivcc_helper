@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>База знаний</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sql.css" />
+  </head>
+  <body>
+    <header class="perv">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html"><img src=".//img/logo.png" alt="Логотип" /></a>
+        </div>
+        <div class="txt">
+          <p>ЗАПРОСЫ SQL</p>
+        </div>
+        <div class="btn">
+          <a href=""><button>Выход</button></a>
+        </div>
+      </div>
+    </header>
+    <section class="pam">
+      <div class="container">
+        <div class="txt">
+          <p>
+            На этой странице представлены SQL запросы для различных задач работы с базой данных.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart">
+      <div class="container">
+        <div class="carts1">
+          <a href=".//testirovanie.html">
+            <div class="card">
+              <img src=".//img/back.svg" alt="Налог" />
+              <p>Назад</p>
+            </div>
+          </a>
+
+          <a href=".//index.html">
+            <div class="card">
+              <img src=".//img/home.svg" alt="Ссылки" />
+              <p>На главную</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="sql-section">
+      <div class="container">
+        <!-- Категория: Общее -->
+        <div class="sql-category">
+          <h2 class="category-title">Общее</h2>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Отставание StandBy</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-comment">-- Отставание StandBy</span>
+              <span class="sql-keyword">SELECT</span>
+              <span class="sql-function">TO_CHAR</span>(<span
+                class="sql-function"
+                >SCN_TO_TIMESTAMP</span
+              >(current_scn),
+              <span class="sql-string">'DD-MM-YYYY HH24:MI:SS'</span>) &nbsp;
+              <span class="sql-keyword">FROM</span>
+              <span class="sql-entity">V$DATABASE</span>;
+            </div>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Поиск пачек по ветке 104/04</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-keyword">SELECT</span> * &nbsp;
+              <span class="sql-keyword">FROM</span>
+              <span class="sql-entity">CAM$EXCH</span>.<span class="sql-entity"
+                >TASK</span
+              >
+              &nbsp; <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID_INCOMING_ENVELOPE</span> =
+              <span class="sql-number">2561210001</span>;<span
+                class="sql-comment"
+                >-- ID_INCOMING_ENVELOPE = ун конверта</span
+              >
+            </div>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Состояние пачек</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-keyword">SELECT</span> * &nbsp;
+              <span class="sql-keyword">FROM</span>
+              <span class="sql-entity">CAM$EXCH</span>.<span class="sql-entity"
+                >TASK_PACK</span
+              >
+              &nbsp; <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID</span>
+              <span class="sql-keyword">IN</span> (<span class="sql-number"
+                >2334540050</span
+              >, <span class="sql-number">2334540031</span>,
+              <span class="sql-number">2334540040</span>);
+              <span class="sql-comment"
+                >--CAM$EXCH.TASK_PACK это id_task_pack из CAM$EXCH.TASK</span
+              >
+            </div>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Логи пачек</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-keyword">SELECT</span> * &nbsp;
+              <span class="sql-keyword">FROM</span>
+              <span class="sql-entity">CAM$EXCH</span>.<span class="sql-entity"
+                >TASK_LOG_ITEM_24_1</span
+              >
+              &nbsp; <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID_LOG_OBJ</span>
+              <span class="sql-keyword">IN</span> (<span class="sql-number"
+                >318216657</span
+              >, <span class="sql-number">318217014</span>,
+              <span class="sql-number">318217014</span>);
+              <span class="sql-comment"
+                >-- ID_LOG_OBJ это ID_LOG_OBJ из CAM$EXCH.TASK</span
+              >
+
+              <span class="sql-entity">CAM$NSI</span>.<span class="sql-entity"
+                >R$DOC_TASK_TYPE</span
+              >
+              <span class="sql-keyword">IS</span>
+              <span class="sql-string">'Справочник задач документа'</span>;
+            </div>
+          </div>
+        </div>
+
+        <!-- Категория: Обход режима "Вернуть на доввод" -->
+        <div class="sql-category">
+          <h2 class="category-title">Обход режима "Вернуть на доввод"</h2>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Перевести НД на доввод без кнопки</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-comment"
+                >-- Перевести НД на доввод без кнопки (где ID - УН
+                документа):</span
+              >
+
+              <span class="sql-keyword">UPDATE</span>
+              <span class="sql-entity">CAM$DOC</span>.<span class="sql-entity"
+                >INC$DOCUMENT</span
+              >
+              &nbsp; <span class="sql-keyword">SET</span>
+              <span class="sql-entity">ID_NSI_DOC_TASK_TYPE</span> =
+              <span class="sql-number">10010</span> &nbsp;
+              <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID</span> =
+              <span class="sql-number">2207412617</span>;
+              <span class="sql-keyword">COMMIT</span>;
+              <span class="sql-keyword">UPDATE</span>
+              <span class="sql-entity">CAM$NBO</span>.<span class="sql-entity"
+                >INC$DOCUMENT_STATE</span
+              >
+              &nbsp; <span class="sql-keyword">SET</span>
+              <span class="sql-entity">ID_NSI_STATE_PROCESS</span> =
+              <span class="sql-number">15</span> &nbsp;
+              <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID</span> =
+              <span class="sql-number">2207412617</span>;
+              <span class="sql-keyword">COMMIT</span>;
+            </div>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">
+                Возврат документа в начальное состояние
+              </div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-comment"
+                >--возврат документа в начальное состояние</span
+              >
+
+              <span class="sql-keyword">UPDATE</span>
+              <span class="sql-entity">CAM$DOC</span>.<span class="sql-entity"
+                >INC$DOCUMENT</span
+              >
+              &nbsp; <span class="sql-keyword">SET</span>
+              <span class="sql-entity">ID_NSI_DOC_TASK_TYPE</span> = (<span
+                class="sql-keyword"
+                >NULL</span
+              >) &nbsp; <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID</span> =
+              <span class="sql-number">2207412617</span>;
+              <span class="sql-keyword">COMMIT</span>;
+              <span class="sql-keyword">UPDATE</span>
+              <span class="sql-entity">CAM$NBO</span>.<span class="sql-entity"
+                >INC$DOCUMENT_STATE</span
+              >
+              &nbsp; <span class="sql-keyword">SET</span>
+              <span class="sql-entity">ID_NSI_STATE_PROCESS</span> =
+              <span class="sql-number">7</span> &nbsp;
+              <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">ID</span> =
+              <span class="sql-number">2207412617</span>;
+              <span class="sql-keyword">COMMIT</span>;
+            </div>
+          </div>
+        </div>
+
+        <!-- Категория: Гранты (Права) -->
+        <div class="sql-category">
+          <h2 class="category-title">Гранты (Права)</h2>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Права на таблицу</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-keyword">GRANT SELECT ON</span>
+              <span class="sql-entity">I$CARDOWNER</span>.<span
+                class="sql-entity"
+                >V$WATERAIRTRANSPORTRIGHT</span
+              >
+              &nbsp;<span class="sql-comment">-- права на таблицу</span>
+              <span class="sql-keyword">TO</span>
+              <span class="sql-entity">CAM$TAXMON</span>
+              <span class="sql-keyword">WITH GRANT OPTION</span>; &nbsp;<span
+                class="sql-comment"
+                >-- для схемы</span
+              >
+
+              <span class="sql-keyword">GRANT SELECT ON</span>
+              <span class="sql-entity">CAM$DATA</span>.<span class="sql-entity"
+                >T334_R2_R3</span
+              >
+              <span class="sql-keyword">TO</span>
+              <span class="sql-entity">CAM$SZPK</span>
+              <span class="sql-keyword">WITH GRANT OPTION</span>;
+              <span class="sql-keyword">COMMIT</span>;
+            </div>
+          </div>
+        </div>
+
+        <!-- Остальные категории (Цифровой акциз, Шаблоны, ЦУН, НДП, СЗПК) -->
+        <div class="sql-category">
+          <h2 class="category-title">Цифровой акциз</h2>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Запросы по GTIN</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-keyword">SELECT</span> * &nbsp;
+              <span class="sql-keyword">FROM</span>
+              <span class="sql-entity">CAM$DIFF</span>.<span class="sql-entity"
+                >GTIN_MRC_TOBACCO</span
+              >
+              &nbsp; <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">INN</span> =
+              <span class="sql-number">5252027994</span>;
+              <span class="sql-keyword">SELECT</span> * &nbsp;
+              <span class="sql-keyword">FROM</span>
+              <span class="sql-entity">CAM$DIFF</span>.<span class="sql-entity"
+                >GTIN_REQUEST</span
+              >
+              &nbsp; <span class="sql-keyword">WHERE</span>
+              <span class="sql-entity">INN</span> =
+              <span class="sql-number">5252027994</span>;
+            </div>
+          </div>
+
+          <div class="code-container">
+            <div class="code-header">
+              <div class="code-title">Добавление записи в SMEV</div>
+              <div class="code-language">SQL</div>
+            </div>
+            <button class="copy-btn">Копировать</button>
+            <div class="code-content">
+              <span class="sql-comment"
+                >-- SET SQLBLANKLINES ON; добавить запись с ответом от ГИС МТ
+                (для режима в журнале)</span
+              >
+
+              <span class="sql-keyword">SET SQLBLANKLINES ON</span>;
+              <span class="sql-keyword">SET DEFINE OFF</span>;
+              <span class="sql-keyword">ALTER SESSION SET NLS_DATE_FORMAT</span>
+              = <span class="sql-string">'MM/DD/SYYYY HH24:MI:SS'</span>;
+              <span class="sql-keyword"
+                >ALTER SESSION SET NLS_TIMESTAMP_TZ_FORMAT</span
+              >
+              =
+              <span class="sql-string">'MM/DD/SYYYY HH24:MI:SS.FF TZH:TZM'</span
+              >;
+              <span class="sql-keyword"
+                >ALTER SESSION SET NLS_TIMESTAMP_FORMAT</span
+              >
+              = <span class="sql-string">'MM/DD/SYYYY HH24:MI:SS.FF'</span>;
+              <span class="sql-keyword"
+                >ALTER SESSION SET NLS_NUMERIC_CHARACTERS</span
+              >
+              = <span class="sql-string">'.,'</span>;
+              <span class="sql-keyword"
+                >ALTER SESSION SET NLS_NCHAR_CONV_EXCP</span
+              >
+              = <span class="sql-keyword">FALSE</span>;
+              <span class="sql-keyword">ALTER SESSION SET TIME_ZONE</span> =
+              <span class="sql-string">'+03:00'</span>;
+
+              <span class="sql-keyword">INSERT INTO</span>
+              <span class="sql-entity">CAM$EXCH</span>.<span class="sql-entity"
+                >INCOMING_SMEV</span
+              >
+              ( &nbsp; <span class="sql-entity">ID</span>,
+              <span class="sql-entity">ID_SMEV</span>,
+              <span class="sql-entity">FILE_TYPE</span>,
+              <span class="sql-entity">ID_NSI_STATE_PROCESS</span>,
+              <span class="sql-entity">DATA</span>,
+              <span class="sql-entity">DATE_CREATE</span>,
+              <span class="sql-entity">DATE_STATE</span>,
+              <span class="sql-entity">RESPONSE_STATUS</span>,
+              <span class="sql-entity">RESPONSE_INFO</span>,
+              <span class="sql-entity">RESPONSE_ERR</span>,
+              <span class="sql-entity">RESPONSE_ASK_STATUS</span>,
+              <span class="sql-entity">RESPONSE_ASK_ERR</span>
+              )
+              <span class="sql-keyword">VALUES</span> (<span class="sql-number"
+                >2</span
+              >, <span class="sql-number">2</span>,
+              <span class="sql-number">1405</span>,
+              <span class="sql-number">1101</span>,
+              <span class="sql-string"
+                >'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTE2Ij8+Cjx0bnM6Q0hFQ0tHVElOUmVzcG9uc2XCoHhtbG5zOnRucz0idXJuOi8veC1hcnRlZmFjdHMtZm5zLWNoZWNrZ3Rpbi9yb290LzMxMC05My80LjAuMCLCoHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiwqB4c2k6c2NoZW1hTG9jYXRpb249InVybjovL3gtYXJ0ZWZhY3RzLWZucy1jaGVja2d0aW4vcm9vdC8zMTAtOTMvNC4wLjAgZm5zLWNoZWNrZ3Rpbi1ydS1yb290LnhzZCLCoNCY0LTQl9Cw0L/RgNC+0YE9IjlkYmUwNjk4LTY0N2UtNDA5YS1hOWQ4LTFjY2VjMjdhYWQ2YiLCoNCa0L7QtNCe0LHRgD0iMiLCoNCU0LDRgtCw0JLRgNCe0YLQsj0iMjAyMy0wOC0wNFQxMTo1MzowMC4yMzVaIj7CoDwvdG5zOkNIRUNLR1RJTlJlc3BvbnNlPiA='</span
+              >, <span class="sql-function">SYSDATE</span>,
+              <span class="sql-function">SYSDATE</span>,
+              <span class="sql-string">'1'</span>,
+              <span class="sql-keyword">NULL</span>,
+              <span class="sql-keyword">NULL</span>,
+              <span class="sql-string">'2'</span>,
+              <span class="sql-keyword">NULL</span>);
+
+              <span class="sql-keyword">COMMIT</span>;
+            </div>
+          </div>
+        </div>
+
+        <!-- Остальные категории здесь -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src=".//img/footer-logo.png"
+            alt="Логотип компании"
+            class="logo-img"
+          />
+          <p class="footer-about">
+            Мы создаем инновационные решения для вашего бизнеса, помогая
+            достигать новых высот в цифровую эпоху.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>125373, г. Москва, Походный п-д, д.3, стр.1</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>+7 (495) 913-19-63</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>info@gnivc.ru</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>Пн-Пт: 9:00 - 18:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; 2025 АО "ГНИВЦ". Все права защищены.</div>
+    </footer>
+    <script>
+      // Обновленный скрипт для кнопок копирования
+      document.addEventListener("DOMContentLoaded", function () {
+        const copyButtons = document.querySelectorAll(".copy-btn");
+
+        // Функция для копирования текста
+        function copyToClipboard(text) {
+          return new Promise((resolve, reject) => {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(text).then(resolve).catch(reject);
+            } else {
+              // Fallback для старых браузеров
+              const textarea = document.createElement("textarea");
+              textarea.value = text;
+              textarea.style.position = "fixed";
+              document.body.appendChild(textarea);
+              textarea.select();
+
+              try {
+                const successful = document.execCommand("copy");
+                document.body.removeChild(textarea);
+                successful ? resolve() : reject(new Error("Copy failed"));
+              } catch (err) {
+                document.body.removeChild(textarea);
+                reject(err);
+              }
+            }
+          });
+        }
+
+        copyButtons.forEach((button) => {
+          button.addEventListener("click", async function () {
+            const codeContainer =
+              this.parentElement.querySelector(".code-content");
+            if (!codeContainer) return;
+
+            const text = codeContainer.textContent;
+            const originalText = this.textContent;
+
+            try {
+              await copyToClipboard(text);
+              this.textContent = "Скопировано!";
+              this.style.background = "#4CAF50";
+
+              setTimeout(() => {
+                this.textContent = originalText;
+                this.style.background = "#3a7bc8";
+              }, 2000);
+            } catch (err) {
+              console.error("Ошибка при копировании: ", err);
+              this.textContent = "Ошибка!";
+              this.style.background = "#f44336";
+
+              setTimeout(() => {
+                this.textContent = originalText;
+                this.style.background = "#3a7bc8";
+              }, 2000);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+

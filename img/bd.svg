@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <circle style="fill: rgb(222, 222, 222);" cx="256" cy="256" r="256"/>
+  <path style="fill: rgb(222, 222, 222);" d="M277.699,511.076c111.809-9.387,203.18-90.614,227.771-197.382l-88.566-88.566l-32.194,24.255 l-48.693-48.693l-99.918,96.896l-86.904-86.904l-23.933,44.623l76.033,76.031l-52.46,50.874L277.699,511.076z"/>
+  <rect y="113.885" style="fill: rgb(54, 126, 203);" width="78.385" height="288.471" x="119.71"/>
+  <rect y="107.874" style="fill: rgb(34, 75, 141);" width="78.385" height="288.471" x="119.71"/>
+  <rect x="133.634" y="132.69" style="fill: rgb(255, 255, 255);" width="50.55" height="88.606"/>
+  <g transform="matrix(0.63184, 0, 0, 0.687282, 119.710526, 86.217072)" style="">
+    <rect x="34.637" y="82.778" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="34.637" y="105.291" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="34.637" y="127.793" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="34.637" y="150.295" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="34.637" y="172.798" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <circle style="fill:#EBF0F3;" cx="62.054" cy="390.387" r="29.85"/>
+  </g>
+  <circle style="fill: rgb(118, 118, 118);" cx="62.054" cy="390.387" r="24.576" transform="matrix(0.63184, 0, 0, 0.687282, 119.710526, 86.217072)"/>
+  <rect x="209.725" y="113.885" style="fill: rgb(223, 175, 0);" width="78.385" height="288.471"/>
+  <rect x="209.725" y="107.874" style="fill: rgb(254, 197, 0);" width="78.385" height="288.471"/>
+  <rect x="223.652" y="132.69" style="fill: rgb(255, 255, 255);" width="50.55" height="88.606"/>
+  <g transform="matrix(0.63184, 0, 0, 0.687282, 119.710526, 86.217072)" style="">
+    <rect x="177.106" y="82.778" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="177.106" y="105.291" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="177.106" y="127.793" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="177.106" y="150.295" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="177.106" y="172.798" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <circle style="fill:#EBF0F3;" cx="204.508" cy="390.387" r="29.85"/>
+  </g>
+  <circle style="fill: rgb(118, 118, 118);" cx="204.508" cy="390.387" r="24.576" transform="matrix(0.63184, 0, 0, 0.687282, 119.710526, 86.217072)"/>
+  <rect x="201.871" y="27.428" transform="matrix(-0.963999, 0.265906, -0.227223, -0.974669, 631.094727, 360.414368)" style="fill: rgb(41, 144, 207);" width="78.816" height="286.883"/>
+  <rect x="200.503" y="21.622" transform="matrix(-0.963999, 0.265906, -0.227223, -0.974669, 627.097717, 349.276642)" style="fill: rgb(46, 155, 223);" width="78.815" height="286.881"/>
+  <rect x="197.444" y="48.599" transform="matrix(-0.963999, 0.265906, -0.227223, -0.974669, 577.24231, 210.438156)" style="fill: rgb(255, 255, 255);" width="50.825" height="88.118"/>
+  <g transform="matrix(0.63184, 0, 0, 0.687282, 119.710526, 86.217072)" style="">
+    <rect x="312.312" y="87.641" transform="matrix(-0.9693 0.2458 -0.2458 -0.9693 691.6009 97.5195)" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="317.85" y="109.464" transform="matrix(-0.9693 0.2458 -0.2458 -0.9693 707.8734 139.1354)" style="fill:#EBF0F3;" width="54.804" height="8.571"/>
+    <rect x="323.382" y="131.279" transform="matrix(-0.9693 0.2458 -0.2458 -0.9693 724.1304 180.7406)" style="fill:#EBF0F3;" width="54.805" height="8.571"/>
+    <rect x="328.912" y="153.09" transform="matrix(-0.9693 0.2458 -0.2458 -0.9693 740.3818 222.3326)" style="fill:#EBF0F3;" width="54.805" height="8.571"/>
+    <rect x="334.438" y="174.89" transform="matrix(-0.9693 0.2458 -0.2458 -0.9693 756.6235 263.9062)" style="fill:#EBF0F3;" width="54.805" height="8.571"/>
+    <ellipse style="fill:#EBF0F3;" cx="414.286" cy="385.985" rx="29.85" ry="29.85"/>
+  </g>
+  <ellipse style="fill: rgb(118, 118, 118);" cx="381.473" cy="351.497" rx="15.528" ry="16.891"/>
+</svg>

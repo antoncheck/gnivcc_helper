@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>База знаний</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/rmt.css" />
+  </head>
+  <body>
+    <header class="perv">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html"><img src=".//img/logo.png" alt="Логотип" /></a>
+        </div>
+        <div class="txt">
+          <p>НАСТРОЙКА RealtimeMonitoringTool</p>
+        </div>
+        <div class="btn">
+          <a href=""><button>Выход</button></a>
+        </div>
+      </div>
+    </header>
+    <section class="pam">
+      <div class="container">
+        <div class="txt">
+          <p>
+            На этой странице представлены настройки и строки подключения для
+            работы с RealtimeMonitoringTool (RTM) и другими системами
+            мониторинга.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart">
+      <div class="container">
+        <div class="carts1">
+          <a href=".//testirovanie.html">
+            <div class="card">
+              <img src=".//img/back.svg" alt="Налог" />
+              <p>Назад</p>
+            </div>
+          </a>
+
+          <a href=".//index.html">
+            <div class="card">
+              <img src=".//img/home.svg" alt="Ссылки" />
+              <p>На главную</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="rtm-section">
+      <div class="container">
+        <div class="rtm-header">
+          Ссылка на актуальный RTM:
+          VGS200-S-AISF50TVAIS3clientRealtimeMonitorTool
+        </div>
+
+        <div class="config-block">
+          <div class="config-title">
+            <i class="fas fa-database"></i> Строка подключения к PTM (для всех
+            контуров)
+          </div>
+          <div class="connection-string code-content">
+            Data Source=GS200-s-db03; Initial Catalog=CdLogConsolidation; User
+            Id=cdog; Password=cdog;
+          </div>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <div class="config-block">
+          <div class="config-title">
+            <i class="fas fa-database"></i> Строка подключения к PTM KOЭ
+          </div>
+          <div class="connection-string code-content">
+            Data Source=n7701-trmdbkoe; Initial Catalog=CdLogConsolidation; User
+            Id=cdog; Password=cdog;
+          </div>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <div class="config-block">
+          <div class="config-title">
+            <i class="fas fa-database"></i> Строка подключения к PTM KOЭ И3
+          </div>
+          <div class="connection-string code-content">
+            Data Source=n5001-koe032; Initial Catalog=CdLogConsolidation; User
+            Id=cdog; Password=cdog;
+          </div>
+          <button class="copy-btn">Копировать</button>
+        </div>
+
+        <div class="config-block">
+          <div class="config-title">
+            <i class="fas fa-database"></i> Строка подключения к PTM КТИР ФБ2
+          </div>
+
+          <div class="sub-config">
+            <div class="sub-title">-COD1-</div>
+            <div class="connection-string code-content">
+              Data Source=n7701-ktr286.dpc.tax:nalog.ru; Initial
+              Catalog=CdLogConsolidation; User Id=cdog; Password=cdog;
+            </div>
+            <button class="copy-btn">Копировать</button>
+          </div>
+
+          <div class="sub-config">
+            <div class="sub-title">-COD2-</div>
+            <div class="connection-string code-content">
+              Data Source=n7701-ktr287.dpc.tax:nalog.ru; Initial
+              Catalog=CdLogConsolidation; User Id=cdog; Password=cdog;
+            </div>
+            <button class="copy-btn">Копировать</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Добавьте эту секцию после предыдущего контента -->
+    <section class="media-config-section">
+      <div class="container">
+        <div class="media-config-wrapper">
+          <!-- Первый заголовок -->
+          <div class="text-block centered-block">
+            <h2 class="config-heading">
+              Для настройки конкретного контура необходимо настроить
+              подключение.
+            </h2>
+          </div>
+
+          <!-- Первое изображение -->
+          <div class="media-block centered-block">
+            <img
+              src="./img/1.png"
+              alt="Конфигурация контура"
+              class="responsive-media"
+            />
+          </div>
+
+          <!-- Текстовый блок -->
+          <div class="text-block centered-block">
+            <h2 class="config-heading">
+              Контура для подключения: Состав контуров AИC Налог-3. - ЦК DevOps
+              - Confluence (рm/vc.ru)
+            </h2>
+            <p class="config-subtext">
+              Пример (установлен фильтр для тест ПФ):
+            </p>
+          </div>
+
+          <!-- Второе изображение -->
+          <div class="media-block centered-block">
+            <img
+              src="./img/2.png"
+              alt="Пример фильтра"
+              class="responsive-media"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src=".//img/footer-logo.png"
+            alt="Логотип компании"
+            class="logo-img"
+          />
+          <p class="footer-about">
+            Мы создаем инновационные решения для вашего бизнеса, помогая
+            достигать новых высот в цифровую эпоху.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>125373, г. Москва, Походный п-д, д.3, стр.1</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>+7 (495) 913-19-63</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>info@gnivc.ru</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>Пн-Пт: 9:00 - 18:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; 2025 АО "ГНИВЦ". Все права защищены.</div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Обновленный скрипт для кнопок копирования
+      document.addEventListener("DOMContentLoaded", function () {
+        const copyButtons = document.querySelectorAll(".copy-btn");
+
+        // Функция для копирования текста
+        function copyToClipboard(text) {
+          return new Promise((resolve, reject) => {
+            if (navigator.clipboard) {
+              navigator.clipboard.writeText(text).then(resolve).catch(reject);
+            } else {
+              // Fallback для старых браузеров
+              const textarea = document.createElement("textarea");
+              textarea.value = text;
+              textarea.style.position = "fixed";
+              document.body.appendChild(textarea);
+              textarea.select();
+
+              try {
+                const successful = document.execCommand("copy");
+                document.body.removeChild(textarea);
+                successful ? resolve() : reject(new Error("Copy failed"));
+              } catch (err) {
+                document.body.removeChild(textarea);
+                reject(err);
+              }
+            }
+          });
+        }
+
+        copyButtons.forEach((button) => {
+          button.addEventListener("click", async function () {
+            const codeContainer =
+              this.parentElement.querySelector(".code-content");
+            if (!codeContainer) return;
+
+            const text = codeContainer.textContent;
+            const originalText = this.textContent;
+
+            try {
+              await copyToClipboard(text);
+              this.textContent = "Скопировано!";
+              this.style.background = "#4CAF50";
+
+              setTimeout(() => {
+                this.textContent = originalText;
+                this.style.background = "#3a7bc8";
+              }, 2000);
+            } catch (err) {
+              console.error("Ошибка при копировании: ", err);
+              this.textContent = "Ошибка!";
+              this.style.background = "#f44336";
+
+              setTimeout(() => {
+                this.textContent = originalText;
+                this.style.background = "#3a7bc8";
+              }, 2000);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

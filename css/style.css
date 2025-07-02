@@ -80,8 +80,8 @@
   cursor: pointer;
 }
 .perv {
-  background-color: #66646446;
-
+  background-color: #abccec70;
+/* #66646446 */
   top: 0;
   z-index: 100;
 }
