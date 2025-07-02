@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>База знаний</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jira.css" />
+  </head>
+  <body>
+    <header class="perv">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html"><img src=".//img/logo.png" alt="Логотип" /></a>
+        </div>
+        <div class="txt">
+          <p>РАБОТА В JIRA</p>
+        </div>
+        <div class="btn">
+          <a href=""><button>Выход</button></a>
+        </div>
+      </div>
+    </header>
+    <section class="pam">
+      <div class="container">
+        <div class="txt">
+          <p>Инструкция по работе с сущностями в Jira.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart">
+      <div class="container">
+        <div class="carts1">
+          <a href=".//pamyatka.html">
+            <div class="card">
+              <img src=".//img/back.svg" alt="Налог" />
+              <p>Назад</p>
+            </div>
+          </a>
+
+          <a href=".//index.html">
+            <div class="card">
+              <img src=".//img/home.svg" alt="Ссылки" />
+              <p>На главную</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="jira-section">
+        <div class="container">
+            <div class="instruction-container">
+                <h2 class="history-title">Работа с Jira и структуры</h2>
+                
+                <p class="instruction-text">
+                    Для входа в Jira необходимо ввести свой логин и пароль. Они должны быть точно такими же, как и от учетной записи ГНИВЦ. На веб-версии необходимо без <b>GNIVC\</b>. Пароль (при первом входе или смене пароля) необходимо вводить вручную, не копировать, и после ввода нажать кнопку входа.
+                </p>
+                
+                <p class="instruction-text">
+                    Основная панель управления находится в верхней части экрана.
+                </p>
+                
+                <p class="instruction-text">
+                    Для удобства поиска и создания задач перейдите в структуру: <b>KNP_2 → Структура → ГНИВЦ Jira (gnive.ru)</b>
+                </p>
+                
+                <p class="instruction-text">
+                    Для перехода необходимо выбрать структуру <b>«KNP_2»</b>. Если структуры нет, выберите любую и в поиске введите <b>KNP_2</b>, либо выберите <b>Управление структурами</b> и найдите там <b>KNP_2</b>.
+                </p>
+                
+                
+                
+                <h3 class="subsection-header">Иерархия сущностей</h3>
+                
+                <ul class="entity-types">
+                    <li><b>Эпик</b> - долгосрочный проект (несколько месяцев)</li>
+                    <li><b>Фича</b> - крупный блок работ (~3 месяца)</li>
+                    <li><b>История</b> - 2 недели до 1 месяц</li>
+                    <li><b>Задача</b> - от 3 дней до 1 месяц (если не успеваете, увеличивайте время)</li>
+                    <li><b>Таск, чек-лист, дефекты</b> - 1 день</li>
+                </ul>
+                <div class="jira-image">
+                    <img src=".//img/ir.jpeg" alt="Структура в Jira">
+                </div>
+                
+                <p class="instruction-text">
+                    Время можно изменять в настройках, но общее правило ГНИВЦ - указывать реальное время выполнения задачи.
+                </p>
+                
+                <h3 class="subsection-header">Иерархия задач TFS</h3>
+                
+                <p class="instruction-text">
+                    <b>Основное требование</b> (п. ГК) → Требование по направлениям (НБО/КНП/СНР и т.д.) → Дочерние требования → Задачи
+                </p>
+                
+                <div class="divider"></div>
+                
+                <h3 class="subsection-header">Копирование ссылок</h3>
+                
+                <p class="instruction-text">
+                    Если необходимо кому-то передать ссылку на задачу, для копирования с полным названием необходимо копировать, из верхней строки браузера.
+                </p>
+                
+                <h4 class="subsection-header">Ссылка, скопированная такси образов выглядит так:</h4>
+                
+                <div class="link-example">
+                    [KNP-109] Регулярное списание времени - Работа в TFS и СУФТ, администрирование системы, работа с почтой, распределение официальных писем, перенаправление писем по назначению, обработка писем в Лотусе и прочее - ГНИВЦ Jira (gnivc.ru)
+                </div>
+                
+                <div class="divider"></div>
+                
+                <h3 class="subsection-header">Состояние сущностей</h3>
+                
+                <p class="instruction-text">
+                    Все доступные состояния сущностей можно посмотреть в режиме «Посмотреть бизнес-процесс». В этом режиме не меняются состояния задач.
+                </p>
+                
+                <div class="divider"></div>
+                
+                <h3 class="subsection-header">Добавление в избранное</h3>
+                
+                <ul class="entity-types">
+                    <li>Для добавления в избранное необходимо зажать кнопку «Начать наблюдение за этой задачей»</li>
+                    <li>Все отмеченные задачи можно найти:
+                        <ul>
+                            <li>В Tempo – ГИНВЦ Jira (gnivc.ru) «Моя работа» (Путь: Темпо → Моя работа → Работа → Поиск задач → ... → Наблюдаемая задача)</li>
+                            <li>В Задачи → Поиск задач → Продвинутый → налоги → контейнер</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <div class="divider"></div>
+                
+                <h3 class="subsection-header">Полезные запросы JQL</h3>
+                
+                <ul class="entity-types">
+                    <li>Запрос на отбор по избранным: watcher = currentUser()</li>
+                    <li>Запрос на отбор по меткам: labels = xx, где xx - выбранная метка Пример: labels = УведИО</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src=".//img/footer-logo.png"
+            alt="Логотип компании"
+            class="logo-img"
+          />
+          <p class="footer-about">
+            Мы создаем инновационные решения для вашего бизнеса, помогая
+            достигать новых высот в цифровую эпоху.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>125373, г. Москва, Походный п-д, д.3, стр.1</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>+7 (495) 913-19-63</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>info@gnivc.ru</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>Пн-Пт: 9:00 - 18:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; 2025 АО "ГНИВЦ". Все права защищены.</div>
+    </footer>
+  </body>
+</html>

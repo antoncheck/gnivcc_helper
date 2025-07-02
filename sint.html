@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>База знаний</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sint.css" />
+  </head>
+  <body>
+    <header class="perv">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html"><img src=".//img/logo.png" alt="Логотип" /></a>
+        </div>
+        <div class="txt">
+          <p>ОБЩИЙ СИНТАКСИС</p>
+        </div>
+        <div class="btn">
+          <a href=""><button>Выход</button></a>
+        </div>
+      </div>
+    </header>
+    <section class="pam">
+      <div class="container">
+        <div class="txt">
+          <p>
+            На этой странице собраны рекомендации и стандарты по разработке REST API, 
+                которые помогут обеспечить единообразие и качество кода в проекте. 
+                Здесь вы найдете правила именования endpoints, использования HTTP методов 
+                и форматирования JSON-ответов.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cart">
+      <div class="container">
+        <div class="carts1">
+          <a href=".//pamyatka.html">
+            <div class="card">
+              <img src=".//img/back.svg" alt="Налог" />
+              <p>Назад</p>
+            </div>
+          </a>
+
+          <a href=".//index.html">
+            <div class="card">
+              <img src=".//img/home.svg" alt="Ссылки" />
+              <p>На главную</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="code-conventions-section">
+      <div class="container">
+        <div class="conventions-container">
+          <h2 class="history-title">Работа с базой</h2>
+
+          <h2 class="section-title">Типы данных для базы</h2>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Данные</th>
+                <th>Тип поля</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>id</td>
+                <td>bigotesi</td>
+              </tr>
+              <tr>
+                <td>order</td>
+                <td>numetec</td>
+              </tr>
+              <tr>
+                <td>crossroom</td>
+                <td>numetec</td>
+              </tr>
+              <tr>
+                <td>количество и пр.</td>
+                <td>numetec</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="subsection-title">
+            Максимальное количество символов для строчных типов: 7 
+          </h3>
+
+          <h2 class="section-title">Нейминг</h2>
+
+          <ul class="rules-list">
+            <li>
+              Для имен таблиц и полей используйте раздел
+              <span class="highlight">snake_case.</span>.
+            </li>
+            <li>
+              <strong>Начинайте </strong> имена с буквы и не заканчивайте их символом подчеркивания.
+            </li>
+            <li>
+              <strong>Используйте в названиях</strong> только буквы, цифры и
+              символ подчёркивания.
+            </li>
+            <li>
+              <strong>Избегайте</strong> несколько несколько подряд идущих символов
+              подчёркивания.
+            </li>
+            <li>
+              <strong>Используйте</strong> символ подчёркивания там, где вы бы поставили пробел в реальной жизни(например,
+              <span class="highlight">first_name</span> вместо "first name").
+            </li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <p>
+            Все поля внешних ключей должны называться по имени таблицы с
+            припиской <span class="highlight">Id</span>. Например, есть таблица
+            <span class="highlight">table</span>, и поле с внешним ключом,
+            которое на неё ссылается, должно называться
+            <span class="highlight">table_id</span>.
+          </p>
+
+          <div class="divider"></div>
+
+          <h2 class="section-title">Прочее</h2>
+
+          <p>
+            Ключевые слова <span class="highlight">SELECT</span>,
+            <span class="highlight">WHERE</span> и
+            <span class="highlight">FULL</span> в запросах пишите в верхнем
+            регистре.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="api-guidelines-section">
+      <div class="container">
+        <div class="guidelines-container">
+          <h1 class="section-main-title">Рекомендации по REST API</h1>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">1. Используйте kebab-case для URL</h3>
+              <div class="example-group">
+                <div class="example bad-example">
+                  <div class="example-label">Неправильно:</div>
+                  <div class="example-code">/userSettings</div>
+                  <div class="example-code">/user_settings</div>
+                </div>
+                <div class="example good-example">
+                  <div class="example-label">Правильно:</div>
+                  <div class="example-code">/user-settings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">
+                2. Используйте camelCase для параметров
+              </h3>
+              <div class="example-group">
+                <div class="example bad-example">
+                  <div class="example-label">Неправильно:</div>
+                  <div class="example-code">/users/User_UI</div>
+                  <div class="example-code">/users/UserUI</div>
+                </div>
+                <div class="example good-example">
+                  <div class="example-label">Правильно:</div>
+                  <div class="example-code">/users/userUi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">
+                3. Используйте множественное число для коллекций
+              </h3>
+              <div class="example-group">
+                <div class="example bad-example">
+                  <div class="example-label">Неправильно:</div>
+                  <div class="example-code">GET /user</div>
+                </div>
+                <div class="example good-example">
+                  <div class="example-label">Правильно:</div>
+                  <div class="example-code">GET /users</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">
+                4. Не используйте глаголы в URL ресурсов
+              </h3>
+              <div class="example-group">
+                <div class="example bad-example">
+                  <div class="example-label">Неправильно:</div>
+                  <div class="example-code">PUT /update-user/luzeriqi</div>
+                  <div class="example-code">GET /get-users</div>
+                </div>
+                <div class="example good-example">
+                  <div class="example-label">Правильно:</div>
+                  <div class="example-code">PUT /user/luzeriqi</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">
+                5. Используйте camelCase для JSON свойств
+              </h3>
+              <div class="example-group">
+                <div class="example bad-example">
+                  <div class="example-label">Неправильно:</div>
+                  <div class="example-code">{ "user_name": "Nanov Ivan" }</div>
+                </div>
+                <div class="example good-example">
+                  <div class="example-label">Правильно:</div>
+                  <div class="example-code">{ "userName": "Nanov Ivan" }</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">6. Используйте HTTP методы</h3>
+              <ul class="method-list">
+                <li>
+                  <span class="method-get">GET</span> – для получения данных о
+                  ресурсах
+                </li>
+                <li>
+                  <span class="method-post">POST</span> – для создания новых
+                  ресурсов
+                </li>
+                <li>
+                  <span class="method-put">PUT</span> – для обновления
+                  существующих ресурсов
+                </li>
+                <li>
+                  <span class="method-patch">PATCH</span> – для обновления
+                  только определенных полей
+                </li>
+                <li>
+                  <span class="method-delete">DELETE</span> – для удаления
+                  ресурсов
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="guideline-item">
+            <div class="guideline-content">
+              <h3 class="guideline-title">
+                7. Используйте параметры пути для идентификации ресурсов
+              </h3>
+              <p class="guideline-description">
+                Параметры запроса используйте только для сортировки, фильтрации
+                и пагинации. Не используйте параметры запроса в методах POST,
+                PUT, PATCH, DELETE.
+              </p>
+              <div class="example-group">
+                <div class="example bad-example">
+                  <div class="example-label">Неправильно:</div>
+                  <div class="example-code">GET /user?userId=5</div>
+                  <div class="example-code">DELETE /user?userId=5</div>
+                </div>
+                <div class="example good-example">
+                  <div class="example-label">Правильно:</div>
+                  <div class="example-code">GET /users/5</div>
+                  <div class="example-code">DELETE /users/5</div>
+                  <div class="example-code">GET /users?offset=10&limit=20</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img
+            src=".//img/footer-logo.png"
+            alt="Логотип компании"
+            class="logo-img"
+          />
+          <p class="footer-about">
+            Мы создаем инновационные решения для вашего бизнеса, помогая
+            достигать новых высот в цифровую эпоху.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>125373, г. Москва, Походный п-д, д.3, стр.1</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>+7 (495) 913-19-63</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>info@gnivc.ru</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>Пн-Пт: 9:00 - 18:00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; 2025 АО "ГНИВЦ". Все права защищены.</div>
+    </footer>
+  </body>
+</html>
